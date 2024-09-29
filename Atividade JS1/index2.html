@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Lista de Exercícios</h3>
+        <h4>Nome: David Aurelio</h4>
+
+        <ol id="list">
+            <li><a href="index1.html">Exercício 1</a></li>
+            <li><a href="index2.html">Exercício 2</a></li>
+            <li><a href="index3.html">Exercício 3</a></li>
+            <li><a href="index4.html">Exercício 4</a></li>
+            <li><a href="index5.html">Exercício 5</a></li>
+            <li><a href="index6.html">Exercício 6</a></li>
+            <li><a href="index7.html">Exercício 7</a></li>
+        </ol>
+    </header>
+    
+    <main>
+        <label for="altura">Altura do triângulo: </label>
+        <input type="text" name="altura" id="altura">
+
+        <label for="base">Base do triângulo</label>
+        <input type="text" name="base" id="base" onblur="calcularArea()">
+        
+        
+        <br>
+        <br>
+        
+        <label for="areaT">Área do triângulo</label>
+        <input type="text" name="areaT" id="areaT" readonly>
+
+    </main>
+
+    <script>
+        function calcularArea(){
+            altura = Number(document.getElementById("altura").value);
+            base = Number(document.getElementById("base").value);
+            area = (altura * base)/2;
+
+            limpar();
+            document.getElementById("areaT").value += area;
+
+        }
+
+        function limpar(){
+            document.getElementById("altura").value = "";
+            document.getElementById("base").value = "";
+            document.getElementById("areaT").value = "";
+        }
+    </script>
+</body>
+</html>

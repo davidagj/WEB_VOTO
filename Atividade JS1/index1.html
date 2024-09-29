@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Lista de Exercícios</h3>
+        <h4>Nome: David Aurelio</h4>
+
+        <ol id="list">
+            <li><a href="index1.html">Exercício 1</a></li>
+            <li><a href="index2.html">Exercício 2</a></li>
+            <li><a href="index3.html">Exercício 3</a></li>
+            <li><a href="index4.html">Exercício 4</a></li>
+            <li><a href="index5.html">Exercício 5</a></li>
+            <li><a href="index6.html">Exercício 6</a></li>
+            <li><a href="index7.html">Exercício 7</a></li>
+        </ol>
+    </header>
+    
+    <main>
+        <label for="salario">Salário:</label>
+        <input type="text" name="salario" id="salario">
+
+
+
+        <label for="aumento">Porcentagem de aumento:</label>
+        <input type="text" name="aumento" id="aumento" onblur="calcularNovoSalario()">
+
+        <button onclick="calcularNovoSalario()">Calcular</button>
+
+        <p id="novoSal"> Novo Salário: </p>
+    </main>
+
+    <script>
+        function calcularNovoSalario() {
+            
+            var salario = Number(document.getElementById("salario").value);
+            var aumento = Number(document.getElementById("aumento").value);
+            var novoSalario = salario + (salario * (aumento/100));
+            
+            limpar();
+            document.getElementById("novoSal").innerHTML = document.getElementById("novoSal").innerHTML + novoSalario;
+        }
+
+        function limpar() {
+            document.getElementById("salario").value = "";
+            document.getElementById("aumento").value = "";
+            document.getElementById("novoSal").innerHTML = "Novo Salário: "
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Lista de Exercícios</h3>
+        <h4>Nome: David Aurelio</h4>
+
+        <ol id="list">
+            <li><a href="index1.html">Exercício 1</a></li>
+            <li><a href="index2.html">Exercício 2</a></li>
+            <li><a href="index3.html">Exercício 3</a></li>
+            <li><a href="index4.html">Exercício 4</a></li>
+            <li><a href="index5.html">Exercício 5</a></li>
+            <li><a href="index6.html">Exercício 6</a></li>
+            <li><a href="index7.html">Exercício 7</a></li>
+        </ol>
+    </header>
+    
+    <main>
+      <button onclick="gerarNumero()">Gere um numero!</button>
+    </main>
+
+    <script>
+
+      function gerarNumero() {
+
+      const numero = Math.floor(Math.random() * 101);
+      const parImpar = (numero % 2 === 0) ? 'par' : 'ímpar';
+
+
+      alert("resultado no console!!");
+
+      console.log(`O número gerado é ${numero} e ele é ${parImpar}.`);
+    }
+    </script>
+
+</body>
+</html>

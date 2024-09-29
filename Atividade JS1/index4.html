@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Lista de Exercícios</h3>
+        <h4>Nome: David Aurelio</h4>
+
+        <ol id="list">
+            <li><a href="index1.html">Exercício 1</a></li>
+            <li><a href="index2.html">Exercício 2</a></li>
+            <li><a href="index3.html">Exercício 3</a></li>
+            <li><a href="index4.html">Exercício 4</a></li>
+            <li><a href="index5.html">Exercício 5</a></li>
+            <li><a href="index6.html">Exercício 6</a></li>
+            <li><a href="index7.html">Exercício 7</a></li>
+        </ol>
+    </header>
+    
+    <main>
+        
+        <label for="anoNasc">Ano de nascimento:  </label>
+        <input type="text" name="anoNasc" id="anoNasc" onblur="calcularIdade">
+
+    </main>
+
+    <script>
+        
+     function calcularIdade() {
+    
+        const anoNascimento = Number(document.getElementById("anoNasc").value);
+        const dataAtual = new Date();
+        const anoAtual = dataAtual.getFullYear();
+
+    
+        const idadeAnos = anoAtual - anoNascimento;
+
+    
+        const idade2050 = 2050 - anoNascimento;
+
+    
+        const idadeMeses = idadeAnos * 12;
+        const idadeSemanas = idadeAnos * 52;
+        const idadeDias = idadeAnos * 365;
+        const idadeHoras = idadeDias * 24;
+        const idadeMinutos = idadeHoras * 60;
+
+        limpar()
+        alert("Resultado Exibido no console")
+
+        console.log(`Idade atual: ${idadeAnos} anos`);
+        console.log(`Aproximadamente ${idadeMeses} meses`);
+        console.log(`Aproximadamente ${idadeSemanas} semanas`);
+        console.log(`Aproximadamente ${idadeDias} dias`);
+        console.log(`Aproximadamente ${idadeHoras} horas`);
+        console.log(`Aproximadamente ${idadeMinutos} minutos`);
+        console.log(`Idade em 2050: ${idade2050} anos`);
+        }
+
+        function limpar(){
+            document.getElementById("anoNasc").value = "";
+        }
+    </script>
+</body>
+</html>

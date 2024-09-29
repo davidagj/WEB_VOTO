@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Lista de Exercícios</h3>
+        <h4>Nome: David Aurelio</h4>
+
+        <ol id="list">
+            <li><a href="index1.html">Exercício 1</a></li>
+            <li><a href="index2.html">Exercício 2</a></li>
+            <li><a href="index3.html">Exercício 3</a></li>
+            <li><a href="index4.html">Exercício 4</a></li>
+            <li><a href="index5.html">Exercício 5</a></li>
+            <li><a href="index6.html">Exercício 6</a></li>
+            <li><a href="index7.html">Exercício 7</a></li>
+        </ol>
+    </header>
+    
+    <main>
+        <label for="valorH">Valor da hora trabalhada: </label>
+        <input type="text" name="valorH" id="valorH">
+
+        <label for="refeicao">Numero de refeições: </label>
+        <input type="text" name="refeicao" id="refeicao" onblur="calcularSalario()">
+    </main>
+
+    <script>
+        function calcularSalario() {
+            const valorH = Number(document.getAnimations("valorH").value);
+            const refeicao = Number(document.getElementById("refeicao").value);
+            const trabalhado = 62;
+
+            const bruto = (40 * valorH) + ((22 *valorH) * 3);
+            const desconto = (refeicao * 1.5);
+            const liquido = bruto - desconto;
+
+            limpar();
+            alert("Resultado no console!");
+
+            console.log(`O sálario bruto: R$ ${bruto}`)
+            console.log(`O valor descontado: R$ ${desconto}`)
+            console.log(`O sálario líquido: R$ ${liquido}`)
+        }
+        
+        function limpar(){
+            document.getElementById("valorH").value = "";
+            document.getElementById("refeicao").value = "";
+        }
+    </script>
+</body>
+</html>

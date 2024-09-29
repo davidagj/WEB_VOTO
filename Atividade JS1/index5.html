@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Lista de Exercícios</h3>
+        <h4>Nome: David Aurelio</h4>
+
+        <ol id="list">
+            <li><a href="index1.html">Exercício 1</a></li>
+            <li><a href="index2.html">Exercício 2</a></li>
+            <li><a href="index3.html">Exercício 3</a></li>
+            <li><a href="index4.html">Exercício 4</a></li>
+            <li><a href="index5.html">Exercício 5</a></li>
+            <li><a href="index6.html">Exercício 6</a></li>
+            <li><a href="index7.html">Exercício 7</a></li>
+        </ol>
+    </header>
+    
+    <main>
+        <label for="km">Distância em km: </label>
+        <input type="text" name="km" id="km">
+
+        <label for="litro">Volume em litros do tanque: </label>
+        <input type="text" name="litro" id="litro" onblur="calcularConsumo()">
+    </main>
+
+    <script>
+        function calcularConsumo() {
+            const km = Number(document.getAnimations("km").value);
+            const litro = Number(document.getElementById("litro").value);
+            const consumo = km/litro;
+
+            limpar();
+            alert(`O consumo médio de gasolina é ${consumo} Km por litro`);
+        }
+        
+        function limpar(){
+            document.getElementById("km").value = "";
+            document.getElementById("litro").value = "";
+        }
+    </script>
+</body>
+</html>

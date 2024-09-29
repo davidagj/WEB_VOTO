@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Lista de Exercícios</h3>
+        <h4>Nome: David Aurelio</h4>
+
+        <ol id="list">
+            <li><a href="index1.html">Exercício 1</a></li>
+            <li><a href="index2.html">Exercício 2</a></li>
+            <li><a href="index3.html">Exercício 3</a></li>
+            <li><a href="index4.html">Exercício 4</a></li>
+            <li><a href="index5.html">Exercício 5</a></li>
+            <li><a href="index6.html">Exercício 6</a></li>
+            <li><a href="index7.html">Exercício 7</a></li>
+        </ol>
+    </header>
+    
+    <main>
+        <label for="nota1">Primeira nota: </label>
+        <input type="text" name="nota1" id="nota1">
+
+        <label for="nota2">Segunda nota: </label>
+        <input type="text" name="nota2" id="nota2" onblur="calcularMediaP()">
+        
+        
+        <br>
+        <br>
+        
+        <label for="" id="mediaPonderada">A média ponderada é: </label>
+        
+    </main>
+
+    <script>
+        function calcularMediaP(){
+            var nota1 = Number(document.getElementById("nota1").value);
+            var nota2 = Number(document.getElementById("nota2").value);
+            
+            var mediaP = (nota1 * 0.3) + (nota2 * 0.7);
+
+            limpar()
+            document.getElementById("mediaPonderada").innerHTML += mediaP;
+        }
+
+        function limpar() {
+            document.getElementById("nota1").value = "";
+            document.getElementById("nota2").value = "";
+            document.getElementById("mediaPonderada").innerHTML = "A média ponderada é: "
+        }
+    </script>
+</body>
+</html>
